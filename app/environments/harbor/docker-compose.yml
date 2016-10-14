@@ -1,0 +1,15 @@
+version: '2'
+services:
+
+  codecamp:
+    build: ../../
+    image: registry.services.dmtio.net/codecamp:0.0.1
+    ports:
+      - "80:5000"
+    environment:
+      PORT: 5000
+      DB_HOST: codecamp.cvnwc73rlm8x.us-east-1.rds.amazonaws.com
+      DB_DATABASE: codecamp
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD} 
+      HEALTHCHECK: /health

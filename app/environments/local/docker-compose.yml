@@ -1,0 +1,29 @@
+version: '2'
+services:
+  
+  codecamp:
+    build: ../../
+    image: jritsema/codecamp:0.0.1
+    ports:
+      - "80:5000"
+    links:
+      - db
+    environment:
+      PORT: 5000
+      DB_HOST: db
+      DB_DATABASE: codecamp
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+
+  db:
+    image: mysql:5.6.27
+    ports:
+      - "3306:3306"
+    volumes:
+      - ../../:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: foo      
+      MYSQL_DATABASE: codecamp
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+

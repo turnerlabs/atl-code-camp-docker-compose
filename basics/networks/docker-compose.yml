@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+
+  service1:
+    image: ubuntu:14.04
+    command: sleep 3600
+    networks:
+      - default
+      - network1
+
+  service2:
+    image: ubuntu:14.04
+    command: sleep 3600
+    networks:
+      - default 
+
+networks:
+  network1:
+    driver: bridge
