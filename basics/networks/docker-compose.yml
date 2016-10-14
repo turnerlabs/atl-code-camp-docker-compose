@@ -13,7 +13,13 @@ services:
     image: ubuntu:14.04
     command: sleep 3600
     networks:
-      - default 
+      - default
+
+  service3:
+    image: ubuntu:14.04
+    command: sleep 3600
+    networks:
+      - network1         
 
 networks:
   network1:

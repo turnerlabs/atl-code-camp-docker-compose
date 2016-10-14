@@ -21,7 +21,6 @@ This repo contains demo material for the talk.
 ### 3rd-party demos
 
 - wordpress
-- jenkins
 - elk stack
 - example-voting-app
 

@@ -6,8 +6,8 @@ compose file basics
 #### imperative (with `docker`)
 
 ```bash
-$ docker run -it --rm -p 80:3000 -e "PORT=3000" -e "DATABASE:foo" -e "TIMEOUT=60" --name web jritsema/web-app
-$ docker run -it --rm -p 80:4000 -e "PORT=4000" -e "QUEUE:bar" -e "TIMEOUT=60" --name worker jritsema/worker-app
+$ docker run -it --rm -p 80:3000 -e "PORT=3000" -e "DATABASE=foo" -e "TIMEOUT=60" --name web jritsema/web-app
+$ docker run -it --rm -p 80:4000 -e "PORT=4000" -e "QUEUE=bar" -e "TIMEOUT=60" --name worker jritsema/worker-app
 ```
 
 #### declarative (with `docker-compose`)
@@ -95,7 +95,13 @@ services:
     image: ubuntu:14.04
     command: sleep 3600
     networks:
-      - default 
+      - default
+
+  service3:
+    image: ubuntu:14.04
+    command: sleep 3600
+    networks:
+      - network1       
 
 networks:
   network1:
