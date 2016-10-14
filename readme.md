@@ -28,6 +28,6 @@ This repo contains demo material for the talk.
 
 - bare metal
 - local docker
-- Azure vm
+- Azure
 - ECS
 - GKE
