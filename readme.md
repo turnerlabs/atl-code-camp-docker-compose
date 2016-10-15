@@ -7,6 +7,8 @@ Learn how to leverage [Docker Compose](https://docs.docker.com/compose/) for loc
 
 ---
 
+[Slides](https://docs.google.com/presentation/d/1hJUEkWSGQJHhbYnYPLID46XHJ68JVyEqOa7GgH12YPY/edit?usp=sharing)
+
 This repo contains demo material for the talk.
 
 
@@ -20,9 +22,9 @@ This repo contains demo material for the talk.
 
 ### 3rd-party demos
 
+- example-voting-app
 - wordpress
 - elk stack
-- example-voting-app
 
 ### sample application
 
